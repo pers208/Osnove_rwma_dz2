@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:paddingStart="16dp"
+    android:weightSum="5"
+    android:paddingEnd="16dp">
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_weight="4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FERIT"></TextView>
+    <ImageView
+        android:id="@+id/tvX"
+        android:layout_weight="1"
+        android:src="@drawable/xbutton"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="X"
+        ></ImageView>
+</LinearLayout>
