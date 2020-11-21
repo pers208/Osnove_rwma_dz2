@@ -7,12 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
+    <!--RecyclerView element -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         />
+    <!-- I am using linear layout because its easier to set up elements and divide
+    grid into approximately mock-up values, and by making the orientation horizontal
+    I can place elements next to each other as simple as possible-->
     <LinearLayout
         android:layout_alignParentBottom="true"
         android:id="@+id/bottomLayout"
@@ -22,14 +25,14 @@
         android:orientation="horizontal">
         <EditText
             android:id="@+id/editText"
-            android:hint="Ime"
+            android:hint="@string/hintAddNewStudent"
             android:layout_weight="4"
             android:layout_width="340dp"
             android:layout_height="wrap_content"></EditText>
         <Button
             android:id="@+id/addButton"
             android:layout_weight="1"
-            android:text="dodaj"
+            android:text="@string/addNewStudentButton"
             android:layout_width="wrap_content"
             android:onClick="addCell"
             android:layout_height="wrap_content"></Button>

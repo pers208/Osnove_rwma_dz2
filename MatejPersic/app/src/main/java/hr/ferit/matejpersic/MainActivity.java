@@ -16,10 +16,11 @@ import java.util.List;
 import java.util.logging.Logger;
 
 public class MainActivity extends AppCompatActivity implements NameClickListener {
+    //declaring variables
     private EditText editText;
-
     private RecyclerView recyclerView;
     private RecyclerAdapter recyclerAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,34 +29,33 @@ public class MainActivity extends AppCompatActivity implements NameClickListener
         setupRecyclerData();
     }
     private void setupRecycler(){
+        //initializing variables, recycleView and recyclerAdapter
         recyclerView=findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerAdapter=new RecyclerAdapter(this);
         recyclerView.setAdapter(recyclerAdapter);
-
         editText=findViewById(R.id.editText);
     }
     private void setupRecyclerData(){
+        //setting up gimmick data and adding it to the view via adapter
         List<String> data=new ArrayList<>();
         data.add("Ana");
         data.add("Pero");
         data.add("Stjepan");
-
+        data.add("Filip");
         recyclerAdapter.addData(data);
     }
 
     public void addCell(View view){
+        //onClick method for button (id addButton)
         String studentName=editText.getText().toString();
         if(!studentName.isEmpty())
         recyclerAdapter.addNewCell(studentName,recyclerAdapter.getItemCount());
-    }
-    public void removeCell(View view){
-        recyclerAdapter.removeCell(0);
+        editText.setText("");
     }
 
     @Override
     public void onNameClick(int position) {
         recyclerAdapter.removeCell(position);
-        Toast.makeText(this,"position"+ position,Toast.LENGTH_LONG).show();
     }
 }

@@ -11,15 +11,14 @@
         android:layout_weight="4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="FERIT"></TextView>
+        android:text="@string/cellSampleText"></TextView>
     <ImageView
         android:id="@+id/tvX"
         android:layout_weight="1"
         android:src="@drawable/xbutton"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        android:layout_width="40dp"
+        android:layout_marginTop="@dimen/marginSize"
+        android:layout_marginBottom="@dimen/marginSize"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="X"
         ></ImageView>
 </LinearLayout>

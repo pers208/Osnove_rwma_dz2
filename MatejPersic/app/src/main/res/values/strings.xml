@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">orwmaLv2</string>
+    <string name="app_name">orwmaDZ2</string>
+    <string name="addNewStudentButton">Dodaj</string>
+    <string name="hintAddNewStudent">Ime</string>
+    <string name="cellSampleText">FERIT</string>
 </resources>
